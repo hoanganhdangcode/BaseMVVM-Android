@@ -6,16 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
 
-abstract class BaseActivity<VB : ViewBinding>(
+abstract class BaseActivity<VB : ViewBinding?>(
     private val bindingInflater: (LayoutInflater) -> VB
 ) : AppCompatActivity() {
-    protected lateinit var binding: VB
+    protected var binding: VB? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = bindingInflater.invoke(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding?.root)
         initView()
         initListener()
         initObserver()

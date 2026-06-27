@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="aâjjạ"
-        android:textSize="50dp"
+        android:id="@+id/tv_text_demo"
+        android:text="@string/a_jj"
+        android:textSize="50sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
